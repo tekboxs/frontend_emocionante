@@ -1,24 +1,16 @@
-const toast = createToast();
-
-document.getElementById('ctaBtn').addEventListener('click', () => {
-  document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
-});
-
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  e.target.reset();
-  showToast('Mensagem enviada! ✔');
-});
-
-function createToast() {
-  const el = document.createElement('div');
-  el.className = 'toast';
-  document.body.appendChild(el);
-  return el;
+const text=document.querySelector('.center img');
+const div=document.querySelector('.center');
+let angle=0;
+const radius=50;
+function range(){
+  return Math.floor(Math.random()*256);
 }
+setInterval(()=>{ div.style.backgroundColor=`rgb(${range()}, ${range()}, ${range()})`;
+},10);
+function orbit(){
+  angle=(angle-30)%360;
+  text.style.transform=`rotate(${angle}deg)`;
+  requestAnimationFrame(orbit);
 
-function showToast(message, duration = 3000) {
-  toast.textContent = message;
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), duration);
 }
+orbit();
