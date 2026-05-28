@@ -28,14 +28,18 @@ function atualizar() {
 
 
 
-function adjustText(element){
-let size = 100;
-while (element.scrollWidth > element.offsetWidth && size> 1){ 
-  size--;
-  element.style.fontSize = size + '%';
-   
+function adjustText(element) {
+  element.style.fontSize = '100%'; // reseta antes de calcular
+  let size = 100;
+  while (element.scrollWidth > element.offsetWidth && size > 1) {
+    size--;
+    element.style.fontSize = size + '%';
+  }
+}
 
+function adjustAllItems() {
+  document.querySelectorAll('.flex-item').forEach(adjustText);
+}
 
-}}
-adjustText(document.querySelector('.flex-item'));
-window.addEventListener('resize', () => adjustText(document.querySelector('.flex-item')));
+adjustAllItems();
+window.addEventListener('resize', adjustAllItems);
