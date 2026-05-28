@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsividade Supimpas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Responsividade Supimpas 📐</h1>
+    <p>Redimensione a janela e veja a mágica acontecer.</p>
+  </header>
+
+  <main>
+
+    <!-- BREAKPOINT ATUAL -->
+    <section class="card">
+      <h2>Breakpoint atual</h2>
+      <div class="breakpoint-label" id="bpLabel">—</div>
+      <p id="bpDesc">Redimensione a janela para ver.</p>
+    </section>
+
+    <!-- MEDIA QUERIES -->
+    <section class="card">
+      <h2>Media Queries</h2>
+      <p>Regras CSS que se aplicam em determinados tamanhos de tela.</p>
+      <pre><code>/* Mobile primeiro */
+.box { background: coral; }
+
+@media (min-width: 768px) {
+  .box { background: steelblue; }
+}
+
+@media (min-width: 1024px) {
+  .box { background: seagreen; }
+}</code></pre>
+      <div class="mq-box">Eu mudo de cor conforme a tela!</div>
+    </section>
+
+    <!-- FLEXBOX -->
+    <section class="card">
+      <h2>Flexbox</h2>
+      <p>Os itens se reorganizam automaticamente com <code>flex-wrap: wrap</code>.</p>
+      <div class="flex-demo">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+      </div>
+    </section>
+
+    <!-- GRID -->
+    <section class="card">
+      <h2>CSS Grid</h2>
+      <p>Com <code>auto-fill + minmax</code> o grid cria colunas automaticamente.</p>
+      <div class="grid-demo">
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">D</div>
+        <div class="grid-item">E</div>
+        <div class="grid-item">F</div>
+      </div>
+    </section>
+
+    <!-- TIPOGRAFIA FLUIDA -->
+    <section class="card">
+      <h2>Tipografia Fluida</h2>
+      <p>Usando <code>clamp()</code> o texto escala suave entre mínimo e máximo.</p>
+      <p class="fluid-text">Texto fluido!</p>
+      <pre><code>font-size: clamp(1rem, 4vw, 3rem);</code></pre>
+    </section>
+
+    <!-- UNIDADES -->
+    <section class="card">
+      <h2>Unidades úteis</h2>
+      <ul>
+        <li><code>%</code> — relativo ao pai</li>
+        <li><code>rem</code> — relativo ao root (html)</li>
+        <li><code>vw / vh</code> — relativo à janela</li>
+        <li><code>ch</code> — largura de um caractere</li>
+        <li><code>clamp(min, val, max)</code> — valor fluido</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Viewport: <strong id="vpSize">—</strong> px</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

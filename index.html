@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Emocionante</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: sans-serif;
+      background: #0f0f0f;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 16px;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      text-align: center;
+      color: #f0f0f0;
+    }
+
+    h1 span { color: #ffd60a; }
+
+    .projetos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 32px 40px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      width: 220px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #ffd60a;
+    }
+
+    .card .emoji { font-size: 3rem; margin-bottom: 16px; }
+
+    .card h2 { font-size: 1.1rem; margin-bottom: 6px; }
+
+    .card p { font-size: 0.8rem; color: #888; }
+
+    footer { color: #444; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+
+  <h1>Frontend <span>Emocionante</span> 🚀</h1>
+
+  <div class="projetos">
+    <a class="card" href="primeiras_emocoes/index.html">
+      <div class="emoji">🌟</div>
+      <h2>Primeiras Emoções</h2>
+      <p>Projeto inicial</p>
+    </a>
+
+    <a class="card" href="responsividade/index.html">
+      <div class="emoji">📐</div>
+      <h2>Responsividade</h2>
+      <p>Estudo de responsividade</p>
+    </a>
+  </div>
+
+  <footer>Clique num projeto para abrir</footer>
+
+</body>
+</html>
