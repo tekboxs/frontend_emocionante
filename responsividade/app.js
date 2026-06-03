@@ -39,7 +39,7 @@ function adjustText(element) {
 
 function adjustAllItems() {
   document.querySelectorAll('.flex-item').forEach(adjustText);
-}
+  }
 
 adjustAllItems();
 window.addEventListener('resize', adjustAllItems);

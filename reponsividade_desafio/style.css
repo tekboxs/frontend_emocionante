@@ -49,6 +49,22 @@ body {
   margin-bottom: 24px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
+@media (max-width: 600px) {
+  .restaurant-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (min-width:768px){
+    .menu-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media (min-width:1024px){
+    .menu-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
 
 .restaurant-info h2 { font-size: 1.4rem; }
 .restaurant-info p  { color: #888; font-size: 0.9rem; }
@@ -76,6 +92,8 @@ body {
   display: flex;
   gap: 8px;
   margin-bottom: 20px;
+  overflow-x:auto;
+
 }
 
 .filtro-btn {
@@ -100,6 +118,12 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* CARD DE PRATO */
@@ -127,7 +151,10 @@ body {
 .prato-nome {
   font-weight: bold;
   margin-bottom: 4px;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   /* TODO: texto longo deve truncar com ... */
 }
 
@@ -135,6 +162,13 @@ body {
   font-size: 0.8rem;
   color: #888;
   margin-bottom: 12px;
+  display: -webkit-box;           /* Define como caixa flexível */
+  -webkit-line-clamp: 2;          /* Número de linhas visíveis */
+  line-clamp: 2;                  /* Compatibilidade com padrão */
+  -webkit-box-orient: vertical;   /* Orientação vertical */
+  overflow: hidden;  
+
+  
   /* TODO: limitar a 2 linhas */
 }
 
@@ -152,8 +186,8 @@ body {
 }
 
 .btn-add {
-  background: #e63946;
-  color: white;
+  background: #df1111;
+  color:hite;
   border: none;
   border-radius: 6px;
   padding: 8px 14px;
@@ -169,12 +203,19 @@ body {
   right: 24px;
   background: #1a1a2e;
   color: white;
-  border-radius: 12px;
+  border-radius: 10px 10px 0px 0ppx;
   padding: 16px 24px;
   display: flex;
   align-items: center;
   gap: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+@media (max-width: 600px) {
+  .pedido-bar {
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
 }
 
 .pedido-bar span { font-size: 0.85rem; color: #aaa; }
@@ -183,7 +224,7 @@ body {
   background: #ffd60a;
   color: #1a1a2e;
   border: none;
-  border-radius: 8px;
+  border-radius:  8px ; 
   padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
