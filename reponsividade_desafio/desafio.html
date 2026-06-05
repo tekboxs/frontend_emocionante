@@ -16,14 +16,6 @@
     </p>
     <div class="missao">
       <strong>🎯 Sua missão</strong>
-      <ul>
-        <li>Cabeçalho do restaurante: empilhar em coluna no mobile</li>
-        <li>Filtros: scroll horizontal sem quebrar layout</li>
-        <li>Grid de pratos: 1 coluna no mobile, 2 no tablet, 3 no desktop</li>
-        <li>Nome do prato: truncar com <code>...</code> se for longo</li>
-        <li>Descrição: limitar a 2 linhas</li>
-        <li>Barra de pedido: ocupar largura total no mobile</li>
-      </ul>
     </div>
   </div>
 
@@ -143,9 +135,18 @@
       <span class="pedido-bar-itens">0 itens no carrinho</span>
       <strong class="pedido-bar-total">R$ 0,00</strong>
     </div>
-    <button>Ver pedido</button>
+    <button id="verPedido">Ver pedido</button>
+    <div id="conteudo"></div>
   </div>
 
   <script src="app.js"></script>
+
+  <script>
+    document.getElementById('verPedido').addEventListener('click', function() {
+      window.location.href = 'pedido.html';
+      //window.location.href → abre na mesma aba
+      
+    });
+  </script>
 </body>
 </html>

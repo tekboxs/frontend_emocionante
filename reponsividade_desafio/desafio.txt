@@ -1,0 +1,1 @@
+Fazer com que remover o item ele encontre o item clicado nao aoenas o primeiro por comparaçpão

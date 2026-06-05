@@ -230,6 +230,11 @@ body {
   cursor: pointer;
   /* TODO: texto não deve transbordar */
 }
+.finalizar-btn{
+   background-color: #ffd60a;
+    color: #1a1a2e;
+    border: none;
+}
 
 /* ─── GABARITO (descomentar para ver a solução) ──────── */
 /*
